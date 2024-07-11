@@ -2,13 +2,8 @@ import random
 
 #Função que joga os dados
 def rolar_d6():
-    dado1 = (random.randint(1, 6))
-    return dado1
-
-#inverte a string
-def inverter_string(s):
-    return s[::-1]
-
+    dado = (random.randint(1, 6))
+    return dado
 
 # Número de jogadas desejado
 numero_jogadas =  2
@@ -18,12 +13,8 @@ resultados = []
 
 # Jogadas
 for num in range(numero_jogadas):
-    resultado_dado1 = rolar_d6()
-    resultados.append(resultado_dado1)
-
-# Exibindo os resultados
-for i, (dado1) in enumerate(resultados, 1):
-    print(f"Jogada {i}: Dado: {dado1}")
+    resultado_dado = rolar_d6()
+    resultados.append(resultado_dado)
 
 # Tabela de nomes
 tabela = {
@@ -36,6 +27,10 @@ tabela = {
         "Última coisa que comeu", "Inverta seu nome", "Inverta seu nome",
         "Inverta seu nome"] 
 }
+
+#inverte a string
+def inverter_string(s):
+    return s[::-1]
 
 # Escolhendo o nome correspondente
 if resultados[0] in [4, 5, 6] and resultados[1] == 6:
